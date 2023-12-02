@@ -8,7 +8,7 @@ const port = 4000;
 app.use(bodyParser.json());
 
 app.post('/grafana/alert', (req, res) => {
-    const scriptPath = 'script.py';
+    const scriptPath = 'automatic_scaling.py';
     exec(`python3 ${scriptPath}`, (error, stdout, stderr) => {
         if (error) {
           console.error(`Error executing the script: ${error}`);
