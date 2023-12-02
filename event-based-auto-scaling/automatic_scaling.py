@@ -24,7 +24,6 @@ def choose_random_node(target_ips):
     return random.choice(available_nodes)
 
 if __name__ == "__main__":
-    source_ip = '192.168.21.81'
     target_ips = ['192.168.21.240', '192.168.21.129', '192.168.21.20']
 
     chosen_node = choose_random_node(target_ips)
