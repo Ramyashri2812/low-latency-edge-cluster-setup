@@ -41,7 +41,7 @@ if __name__ == "__main__":
         
         try:
             print(f"A random node, {name}, has been chosen!")
-            print(f"node/{name} untainted")
+            subprocess.run(['kubectl', 'taint', 'node', name, 'key1-']) //untaints the chosen node
 
             save_used_node()
 
