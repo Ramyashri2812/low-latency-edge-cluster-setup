@@ -1,4 +1,14 @@
-FROM node:18.0-slim
-COPY . .
+FROM node:14-slim
+
+WORKDIR /app
+
+COPY package*.json ./
+
 RUN npm install
-CMD [ "node", "server.js" ]
+
+COPY . .
+
+EXPOSE 4000
+
+CMD ["node", "server.js"]
+
