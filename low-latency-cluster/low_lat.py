@@ -50,8 +50,8 @@ if __name__ == "__main__":
             name = 'cantcode-virtualbox'
         
         try:
-            subprocess.run(['kubectl', 'taint', 'node', name, 'key1-'])
-            subprocess.run(['kubectl', 'create', '-f', 'health_app.yaml'])
+            subprocess.run(['kubectl', 'taint', 'node', name, 'key1-']) #untaints the node with minimal latency
+            subprocess.run(['kubectl', 'create', '-f', 'health_app.yaml']) #creates an instance of the application of untainted node
 
             save_used_node()
 
