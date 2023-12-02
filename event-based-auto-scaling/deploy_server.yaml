@@ -5,7 +5,7 @@ metadata:
   namespace: example-applications
 spec:
   selector:
-    app: appli
+    app: server-scale
   ports:
     - port: 81
       targetPort: 4000
